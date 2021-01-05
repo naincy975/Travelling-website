@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 50%;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    height: 60px;
+    padding: 0 30px;
+}
+
+.navbar ul {
+    display: flex;
+    flex: 20%;
+}
+
+.navbar a {
+    margin: 0 5px;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+
+/* Header */
+
+.hero {
+    background: url('../images/home/kolkata.jpg') no-repeat center center/ cover;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    animation-name: photochange;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.hero .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.hero * {
+    z-index: 10;
+}
+
+.content h2 {
+    font-size: 25px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.content h1 {
+    font-size: 55px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.content h4 {
+    font-size: 20px;
+    text-shadow: 2px 2px 4px black;
+}
+
+.content .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.changetext::after {
+    content: '';
+    animation-name: text;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+}
+
+.logo {
+    animation-name: logoi;
+    animation-iteration-count: infinite;
+    animation-duration: 500ms;
+}
+
+
+/* Icons */
+
+.icons {
+    padding: 30px;
+    width: 100%;
+}
+
+.icons i {
+    padding: 1rem;
+    margin-bottom: 15px;
+    background: red;
+    color: white;
+    border-radius: 25%;
+}
+
+.flex-item {
+    display: flex;
+    flex: 33%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons h1 {
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.icons .row-icon {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icons .row-icon .col-icon {
+    flex: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.icons img {
+    height: 230px;
+    width: 300px;
+    border-radius: 15%;
+    border: 2px solid red;
+}
+
+.icons img:hover {
+    opacity: 0.6;
+}
+
+
+/* Gallery */
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.gallery h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+.gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery .row .column {
+    padding: 4px;
+    flex: 25%;
+}
+
+
+/* Blog */
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog h1 {
+    text-align: center;
+    padding-top: 5px;
+    margin: 25px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.blog .row-bg {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+}
+
+.blog .row-bg .col-bg {
+    flex: 30%;
+    padding: 0px;
+}
+
+.blog img {
+    height: 200px;
+    width: 300px;
+    border-radius: 10%;
+}
+
+.blog .col-bg div {
+    border: 1px solid lightgray;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+/* Contact */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    flex-wrap: wrap;
+}
+
+.contact h1 {
+    text-align: center;
+    padding-top: 5px;
+    margin: 25px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.contact .forem {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+.call-form input {
+    padding: 4px;
+    width: 100%;
+    height: 40px;
+    border: none;
+}
+
+.call-form input:focus {
+    outline-color: red;
+}
+
+.call-form .form-control {
+    margin-bottom: 15px;
+}
+
+.call-form .btn-2 {
+    padding: 12px 0;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    height: 110px;
+    background-color: red;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer .social>* {
+    margin-right: 30px;
+}
+
+
+/* Animation */
+
+@keyframes logoi {
+    0% {
+        font-size: 15px;
+        font-weight: bold;
+    }
+    25% {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    75% {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    100% {
+        font-weight: bold;
+        font-size: 15px;
+    }
+}
+
+@keyframes text {
+    0% {
+        content: 'DELHI';
+    }
+    10% {
+        content: 'AGRA';
+    }
+    20% {
+        content: 'MUMBAI';
+    }
+    30% {
+        content: 'GOA';
+    }
+    40% {
+        content: 'KEDARNATH';
+    }
+    50% {
+        content: 'AMRITSAR';
+    }
+    60% {
+        content: 'BANARAS';
+    }
+    70% {
+        content: 'KERALA';
+    }
+    80% {
+        content: 'MANALI';
+    }
+    100% {
+        content: 'JAIPUR';
+    }
+}
+
+@keyframes photochange {
+    0% {
+        background-image: url('../images/home/delhi.jpg');
+    }
+    10% {
+        background-image: url('../images/home/agra.jpg');
+    }
+    20% {
+        background-image: url('../images/home/mumbai.jpg');
+    }
+    30% {
+        background-image: url('../images/home/goa.jpg');
+    }
+    40% {
+        background-image: url('../images/home/kedarnath.jpg');
+    }
+    50% {
+        background-image: url('../images/home/amritsar.jpg');
+    }
+    60% {
+        background-image: url('../images/home/banaras.jpg');
+    }
+    70% {
+        background-image: url('../images/home/kerala.jpg');
+    }
+    80% {
+        background-image: url('../images/home/manali.jpg');
+    }
+    100% {
+        background-image: url('../images/home/jaipur.jpg');
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+    .navbar a {
+        padding: 10px 10px;
+        margin: 0 3px;
+        font-size: 10px;
+    }
+    .flex-item {
+        flex-direction: column;
+    }
+    .icons .row-icon .col-icon,
+    .flex-item {
+        flex: 100%;
+    }
+    .blog .row-bg .col-bg {
+        flex: 100%;
+    }
+    .gallery .row .column {
+        flex: 100%;
+    }
+    .blog img {
+        height: 165px;
+        width: 242px;
+    }
+    .icons img {
+        height: 165px;
+        width: 220px;
+    }
+    .content h1 {
+        font-size: 20px;
+    }
+    .content h4,
+    .content h2 {
+        font-size: 15px;
+    }
+}
